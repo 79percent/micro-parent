@@ -10,18 +10,18 @@ import styles from './styles/index';
 import './styles/css.less'
 
 const breadCrumbMap = {
-  'home': '首页',
-  'react': 'React',
-  'vue': 'Vue'
+  home: '首页',
+  react: 'React',
+  vue: 'Vue'
 }
 
 export default class App extends React.Component {
   state = {
     current: 'home',
-    breadcrumb: '首页'
+    breadcrumb:  breadCrumbMap['home']
   };
 
-  handleClick = (e: { key: any; }) => {
+  handleClick = e => {
     console.log('click ', e);
     const { key } = e
     this.setState({
@@ -74,6 +74,9 @@ export default class App extends React.Component {
             <Breadcrumb.Item><h3>{breadcrumb}</h3></Breadcrumb.Item>
           </Breadcrumb>
           {this.props.children}
+          <div style={styles.footer}>
+            Copyright © 2020 gechaofeng
+          </div>
         </div>
       </div>
     );

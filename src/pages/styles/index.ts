@@ -42,7 +42,17 @@ const styles = {
     paddingTop: 40,
     paddingBottom: 40,
     backgroundColor: '#ccc',
-    height: '100%'
+    height: '100%',
+    position: 'relative'
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 10,
+    left: 0,
+    width: '100%',
+    height: 30,
+    textAlign: 'center',
+    // lineHeight: 30
   }
 }
 export default styles
